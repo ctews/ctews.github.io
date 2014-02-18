@@ -1,9 +1,9 @@
 ---
 layout: home
-description: "A responsive Jekyll theme with editorial tendencies by designer Michael Rose."
-tags: [Jekyll, theme, responsive, blog, template]
+description: "Christoffer Tews - Mobile Developer"
+tags: [home]
 image:
-  feature: texture-feature-01.jpg
-  credit: Texture Lovers
-  creditlink: http://texturelovers.com
+  feature: about-texture02.jpg
+  credit: Christoffer Tews
+  creditlink: http://flic.kr/ps/2Mnaak
 ---
