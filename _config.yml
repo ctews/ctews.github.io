@@ -36,10 +36,12 @@ links:
   #  url: /about/
   #- title: Archive
   #  url: /posts/
-  #- title: Jimdo Page
-  #  url: http://ctews.de
-  #  external: true
-
+  - title: My Jimdo Page
+    url: http://ctews.de
+    external: true
+  - title: About Jekyll
+    url: http://jekyllrb.com/
+    external: true
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    Europe/Berlin
 future:      true

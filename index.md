@@ -13,7 +13,7 @@ I am a mobile developer born in 1986 from Hamburg, Germany. I've got a B.Sc. and
 
 ## Current Job Position
 
-Mobile Developer @ [Jimdo](http://jimdo.com)|
+Mobile Developer @ [Jimdo](http://jimdo.com)[^1]|
 
 Years ago mobile apps were about features and productivity. Those key factors were the selling points of a mobile application. This changed in the last years and today it's not only about features, it is also about beautiful designs, a great UI and an intuitive UX combined in a rock solid app. This all combined is my passion for mobile development especially focusing on iOS.
 
@@ -25,6 +25,9 @@ Years ago mobile apps were about features and productivity. Those key factors we
 The main focus of my work at Jimdo is the construction of the [iOS app](http://de.jimdo.com/jimdo-app/). We've worked really hard on it and it was received well by both new and existing users (4,5 star average rating) and was featured in over 40 countries as well as nominated in the category ["Best Of 2013"](http://de.jimdo.com/2013/12/17/app-store-das-beste-aus-2013-jimdo-ist-dabei/) by Apple.|
 
 <a markdown="0" href="https://itunes.apple.com/de/app/jimdo/id588950703?mt=8" class="btn" target="_blank">Jimdo iOS App</a>
+
+
+[^1]: You can find my Jimdo site in the top navigation bar. It's a short demo how you can build an "about me" page in under 15 minutes.
 
 ## Sports Life
 
