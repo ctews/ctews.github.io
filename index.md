@@ -27,7 +27,7 @@ The main focus of my work at Jimdo is the construction of the [iOS app](http://d
 <a markdown="0" href="https://itunes.apple.com/de/app/jimdo/id588950703?mt=8" class="btn" target="_blank">Jimdo iOS App</a>
 
 
-[^1]: You can find my Jimdo site in the top navigation bar. It's a short demo how you can build an "about me" page in under 15 minutes.
+<!-- [^1]: You can find my Jimdo site in the top navigation bar. It's a short demo how you can build an "about me" page in under 15 minutes. -->
 
 ## Sports Life
 
