@@ -23,12 +23,14 @@
 </div>
 
 <div id="index">
-  <h3><a href="{{ site.url}}/articles/">Articles</a></h3>
+  <h1>Blog</h1>
   {% for post in site.posts limit:5 %}    
+  <p>
   <article>
-    <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
-    <p>{% if post.description %}{{ post.description }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 120 }}{% endif %}</p>
+    <h3><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+    <p style="margin-bottom: 40px;">{{ post.date | date: '%B %d, %Y' }}{{ post.excerpt }}<a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}"><strong> ... Read more</strong></a></p>
   </article>
+  </p><br>
   {% endfor %}
 </div><!-- /#index -->
 

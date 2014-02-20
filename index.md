@@ -35,7 +35,7 @@ Apart from the business life I changed my mindset about living healthy back in 2
   
 After the lumbago I decided to get fit, eat clean and never let my body being a second choice. From one day to another I did a diet and started with a 6 day per week fitness workout called [P90X](http://www.beachbody.com/product/p90x-what-you-get.do). It was very effective and my body lost 10kg of weight in 3 month and another 8kg in the next 3 month.|
   
-Impressed by the results I'm still working and mastered programs like Insanity, Insanity Asylum 1 & 2, Tapout XT, P90X3 and a little bit of Body Beast. So if you are a developer and reading this: Move your butt, eat clean and train like you mean it --- your won't get a second body in your life!
+Impressed by the results I'm still working out and mastered programs like Insanity, Insanity Asylum 1 & 2, Tapout XT, P90X3 and a little bit of Body Beast. So if you are a developer and reading this: Move your butt, eat clean and train like you mean it --- your won't get a second body in your life!
 
 
 ## Photographer Profiles

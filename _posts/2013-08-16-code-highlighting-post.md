@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Syntax Highlighting Post
-description: "Demo post displaying the various ways of highlighting code in Markdown."
 tags: [sample post, code, highlighting]
 ---
 
@@ -10,6 +9,8 @@ tags: [sample post, code, highlighting]
 ### Pygments Code Blocks
 
 To modify styling and highlight colors edit `/assets/less/pygments.less` and compile `main.less` with your favorite preprocessor. Or edit `main.css` if that's your thing, the classes you want to modify all begin with `.highlight`.
+
+<!--more-->
 
 {% highlight css %}
 #container {

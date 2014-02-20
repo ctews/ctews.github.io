@@ -9,7 +9,7 @@ image:
   credit: Texture Lovers
   creditlink: http://texturelovers.com
 ---
-
+<!--
 <section id="table-of-contents" class="toc">
   <header>
     <h3>Contents</h3>
@@ -18,7 +18,7 @@ image:
 *  Auto generated table of contents
 {:toc}
 </div>
-</section><!-- /#table-of-contents -->
+</section>--><!-- /#table-of-contents -->
 
 ## HTML Elements
 
@@ -39,6 +39,8 @@ Below is just about everything you'll need to style in the theme. Check the sour
 ### Body text
 
 Lorem ipsum dolor sit amet, test link adipiscing elit. **This is strong**. Nullam dignissim convallis est. Quisque aliquam.
+
+<!--more-->
 
 ![Smithsonian Image]({{ site.url }}/images/3953273590_704e3899d5_m.jpg)
 {: .image-pull-right}
