@@ -24,7 +24,11 @@ Years ago mobile apps were about features and productivity. Those key factors we
 
 <p><center>Above you can see an example video of the blog feature from the Jimdo iOS app.</center></p>
 
-The main focus of my work at Jimdo is the construction of the [iOS app](http://de.jimdo.com/jimdo-app/). We've worked really hard on it and it was received well by both new and existing users (4,5 star average rating) and was featured in over 40 countries as well as nominated in the category ["Best Of 2013"](http://de.jimdo.com/2013/12/17/app-store-das-beste-aus-2013-jimdo-ist-dabei/) by Apple.|
+The main focus of my work at Jimdo is the construction of the [iOS app](http://de.jimdo.com/jimdo-app/). We've worked really hard on it and it was received well by both new and existing users (4,5 star average rating) and was featured in over 40 countries as well as nominated in the category ["Best Of 2013"](http://de.jimdo.com/2013/12/17/app-store-das-beste-aus-2013-jimdo-ist-dabei/) by Apple.
+
+The app is fully native, however it is technically exotic in that we decided to build it on the Rubymotion platform. We did this after an exhaustive search of all the available cross-platform solutions. 
+It was hugely important for our small-cross platform team that we could construct something that was technically solid, had native execution speed, had a DSL for writing UI styles/interfaces and not something using auto-generated XML files that we couldn't check in to git. It was also important from an engineering perspective to be able to easily include third party libs (Cocoapods sprung up exactly at this time which was a great coincidence) and be friendly with our CLI-based Continuous Integration system (Jenkins) (the compiler for RM is a CLI-based interface to the LLVM compiler chain). 
+Rubymotion met every requirement perfectly and continues to do so. We make use of several popular Objective-c frameworks such as AFNetworking, LRSlidingCell, PKRevealController in the app. The use of these existing, solid third party libs was a major time-saver in the app's construction.|
 
 <a markdown="0" href="https://itunes.apple.com/de/app/jimdo/id588950703?mt=8" class="btn" target="_blank">Jimdo iOS App</a>
 
