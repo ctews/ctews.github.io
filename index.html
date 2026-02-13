@@ -4,185 +4,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World - Fancy Edition</title>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;700&display=swap');
-
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            font-family: 'Outfit', sans-serif;
-            color: #fff;
-            overflow: hidden;
-        }
-
-        .container {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 3rem;
-            border-radius: 20px;
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            animation: float 6s ease-in-out infinite;
-        }
-
-        h1 {
-            font-size: 4rem;
-            margin-bottom: 0.5rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-            animation: fadeInDown 1s ease-out;
-        }
-
-        p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            animation: fadeInUp 1s ease-out 0.5s backwards;
-        }
-
-        .btn {
-            background: #ff416c;
-            background: -webkit-linear-gradient(to right, #ff4b1f, #ff416c);
-            background: linear-gradient(to right, #ff4b1f, #ff416c);
-            border: none;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: white;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            animation: bounceIn 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) 1s backwards;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 8px 25px rgba(255, 65, 108, 0.5);
-        }
-
-        .btn:active {
-            transform: translateY(1px);
-        }
-
-        /* Animations */
-        @keyframes float {
-            0% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-20px);
-            }
-
-            100% {
-                transform: translateY(0px);
-            }
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translate3d(0, -50px, 0);
-            }
-
-            to {
-                opacity: 1;
-                transform: translate3d(0, 0, 0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translate3d(0, 50px, 0);
-            }
-
-            to {
-                opacity: 1;
-                transform: translate3d(0, 0, 0);
-            }
-        }
-
-        @keyframes bounceIn {
-            0% {
-                opacity: 0;
-                transform: scale(0.3);
-            }
-
-            50% {
-                opacity: 1;
-                transform: scale(1.05);
-            }
-
-            70% {
-                transform: scale(0.9);
-            }
-
-            100% {
-                transform: scale(1);
-            }
-        }
-    </style>
+    <title>Christoffer Tews | VP of Product</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Placeholder for icons, or use local/CDN SVGs -->
+    <!-- Using a CDN for generic icons since fontawesome kit might need setup. Swapping to simple unicode or another library if needed. 
+         Let's stick to simple text or reliable CDNs for now to ensure it works immediately. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Building the Future <br>of Product</h1>
+            <h2>Christoffer Tews | VP of Product</h2>
+            <p style="color: #b3b3b3; max-width: 600px; margin: 0 auto 2rem auto;">
+                Turning complex problems into elegant solutions.
+                Leadership that inspires innovation and drives growth.
+            </p>
+            <a href="#contact" class="cta-button">Let's Connect</a>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">VP</span>
+                    <span class="stat-label">Level Leadership</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">∞</span>
+                    <span class="stat-label">Products Launched</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <div class="container">
-        <h1>Hello World</h1>
-        <p>Welcome to my awesome animated space.</p>
-        <button class="btn" id="confettiBtn">Celebrate!</button>
+        <section class="philosophy">
+            <h3>Core Philosophy</h3>
+            <div class="philosophy-grid">
+                <div class="philosophy-item">
+                    <i class="fas fa-users" style="font-size: 2rem; color: #00d4ff; margin-bottom: 1rem;"></i>
+                    <h4>User-Centric</h4>
+                    <p>Every decision starts with the user. Deep empathy and rigorous research drive meaningful product
+                        experiences.</p>
+                </div>
+                <div class="philosophy-item">
+                    <i class="fas fa-chart-line" style="font-size: 2rem; color: #ff00cc; margin-bottom: 1rem;"></i>
+                    <h4>Data-Informed</h4>
+                    <p>Gut instinct is good; data-backed strategy is better. I leverage analytics to uncover
+                        opportunities and validate hypotheses.</p>
+                </div>
+                <div class="philosophy-item">
+                    <i class="fas fa-lightbulb" style="font-size: 2rem; color: #333399; margin-bottom: 1rem;"></i>
+                    <h4>Visionary</h4>
+                    <p>It's not just about what we build today, but how it sets us up for tomorrow. Strategic thinking
+                        for long-term success.</p>
+                </div>
+            </div>
+        </section>
     </div>
 
-    <script>
-        const btn = document.getElementById('confettiBtn');
+    <footer class="footer" id="contact">
+        <div class="container">
+            <h3>Ready to Innovate?</h3>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/christoffer-tews" target="_blank" class="social-icon"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:christoffer.tews@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+            </div>
+            <p>&copy; 2026 Christoffer Tews. All rights reserved.</p>
+        </div>
+    </footer>
 
-        btn.addEventListener('click', () => {
-            // Realistic confetti effect
-            var count = 200;
-            var defaults = {
-                origin: { y: 0.7 }
-            };
-
-            function fire(particleRatio, opts) {
-                confetti(Object.assign({}, defaults, opts, {
-                    particleCount: Math.floor(count * particleRatio)
-                }));
-            }
-
-            fire(0.25, {
-                spread: 26,
-                startVelocity: 55,
-            });
-            fire(0.2, {
-                spread: 60,
-            });
-            fire(0.35, {
-                spread: 100,
-                decay: 0.91,
-                scalar: 0.8
-            });
-            fire(0.1, {
-                spread: 120,
-                startVelocity: 25,
-                decay: 0.92,
-                scalar: 1.2
-            });
-            fire(0.1, {
-                spread: 120,
-                startVelocity: 45,
-            });
-        });
-    </script>
 </body>
 
 </html>
