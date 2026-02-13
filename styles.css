@@ -1,23 +1,30 @@
 /* Global Styles */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap');
 
 :root {
-    --bg-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    --card-bg: rgba(255, 255, 255, 0.05);
-    --accent-gradient: linear-gradient(to right, #ff00cc, #333399);
-    --text-color: #ffffff;
-    --secondary-text: #b3b3b3;
-    --highlight: #00d4ff;
+    --bg-color: #ffffff;
+    --text-primary: #1e2a4a;
+    --text-secondary: #5f6c80;
+    --primary-blue: #3b60ed;
+    --accent-pink: #ffeef2;
+    --accent-purple: #f4f6ff;
+    --card-bg: #ffffff;
+    --shadow-soft: 0 10px 40px rgba(30, 42, 74, 0.08);
+    --shadow-hover: 0 20px 50px rgba(59, 96, 237, 0.15);
 }
 
 body {
     margin: 0;
     padding: 0;
     font-family: 'Outfit', sans-serif;
-    background: var(--bg-gradient);
-    color: var(--text-color);
+    background-color: var(--bg-color);
+    color: var(--text-primary);
     overflow-x: hidden;
     line-height: 1.6;
+    /* Subtle background shapes */
+    background-image:
+        radial-gradient(circle at 10% 10%, var(--accent-pink) 0%, transparent 40%),
+        radial-gradient(circle at 90% 90%, var(--accent-purple) 0%, transparent 40%);
 }
 
 a {
@@ -35,61 +42,149 @@ a {
 
 /* Hero Section */
 .hero {
-    min-height: 100vh;
+    min-height: 90vh;
+    /* Slightly adjusted */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     position: relative;
-    z-index: 1;
+    padding-top: 4rem;
 }
 
+/* Background Blob Animation */
 .hero::before {
     content: '';
     position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255, 0, 204, 0.1) 0%, rgba(51, 51, 153, 0) 70%);
+    top: -10%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(59, 96, 237, 0.03) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
     z-index: -1;
-    animation: pulse 10s infinite alternate;
+    animation: flow 20s infinite alternate;
 }
+
+/* Profile Image: Geometric Effect */
+.hero-image-wrapper {
+    width: 280px;
+    /* Increased size */
+    height: 320px;
+    margin: 0 auto 2rem auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInDown 1s ease-out;
+}
+
+/* The Blue Hexagon Background */
+.hero-image-wrapper::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-blue);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transform: rotate(0deg);
+    z-index: 0;
+    transition: transform 0.5s ease;
+}
+
+.hero-image-wrapper:hover::before {
+    transform: rotate(180deg) scale(1.05);
+    /* Fun interaction */
+}
+
+.hero-image {
+    width: 95%;
+    /* Slightly smaller to confirm it sits 'in' or 'on' the shape */
+    height: 95%;
+    object-fit: cover;
+    z-index: 1;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    filter: grayscale(100%) contrast(1.1);
+    /* Grayscale effect */
+    transition: all 0.5s ease;
+}
+
+.hero-image:hover {
+    filter: grayscale(0%);
+    /* Color reveal on hover */
+    transform: scale(1.02);
+}
+
+
 
 .hero h1 {
-    font-size: 5rem;
-    font-weight: 800;
+    font-size: 4.5rem;
+    font-weight: 700;
     margin-bottom: 1rem;
-    background: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: fadeInUp 1s ease-out;
-}
-
-.hero h2 {
-    font-size: 2rem;
-    font-weight: 300;
-    color: var(--secondary-text);
-    margin-bottom: 2rem;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
     animation: fadeInUp 1s ease-out 0.2s backwards;
 }
 
-.cta-button {
-    display: inline-block;
-    padding: 1rem 3rem;
-    font-size: 1.2rem;
-    font-weight: 600;
-    background: var(--accent-gradient);
-    border-radius: 50px;
-    box-shadow: 0 4px 15px rgba(255, 0, 204, 0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.hero h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeInUp 1s ease-out 0.3s backwards;
+}
+
+/* Email Form */
+.email-form {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 0 auto 4rem auto;
+    /* Ensures centering */
     animation: fadeInUp 1s ease-out 0.4s backwards;
+    width: 100%;
+    max-width: 500px;
+}
+
+.email-input {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    border: 1px solid #e0e6ed;
+    border-radius: 12px;
+    background: #fff;
+    color: var(--text-primary);
+    font-family: inherit;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.email-input:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 4px rgba(59, 96, 237, 0.1);
+}
+
+.cta-button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background: var(--primary-blue);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(59, 96, 237, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
 .cta-button:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(255, 0, 204, 0.6);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(59, 96, 237, 0.4);
+    background: #2950d9;
 }
 
 /* Stats Section */
@@ -97,50 +192,49 @@ a {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
-    margin-top: 4rem;
+    margin-top: 2rem;
     width: 100%;
 }
 
 .stat-card {
     background: var(--card-bg);
-    padding: 2rem;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2.5rem;
+    border-radius: 24px;
+    border: 1px solid #f0f4f8;
     text-align: center;
-    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-soft);
     transition: transform 0.3s ease;
 }
 
 .stat-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--highlight);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
 }
 
 .stat-number {
-    font-size: 3rem;
-    font-weight: 800;
-    color: var(--highlight);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-blue);
     display: block;
     margin-bottom: 0.5rem;
 }
 
 .stat-label {
-    font-size: 1.1rem;
-    color: var(--secondary-text);
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-weight: 500;
 }
 
 /* Philosophy Section */
 .philosophy {
-    padding: 5rem 0;
+    padding: 6rem 0;
     text-align: center;
 }
 
 .philosophy h3 {
     font-size: 2.5rem;
-    margin-bottom: 3rem;
-    display: inline-block;
-    border-bottom: 3px solid var(--highlight);
-    padding-bottom: 0.5rem;
+    margin-bottom: 4rem;
+    color: var(--text-primary);
 }
 
 .philosophy-grid {
@@ -149,43 +243,58 @@ a {
     gap: 3rem;
 }
 
+.philosophy-item {
+    text-align: left;
+    /* Aligned left for cleaner look */
+    padding: 1rem;
+}
+
 .philosophy-item h4 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #fff;
+    color: var(--text-primary);
+    font-weight: 600;
 }
 
 .philosophy-item p {
-    color: var(--secondary-text);
+    color: var(--text-secondary);
+    line-height: 1.7;
 }
 
 /* Footer / Contact */
 .footer {
     padding: 4rem 0;
     text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid #f0f4f8;
+    background: #fafbff;
     margin-top: 4rem;
 }
 
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem;
     margin-bottom: 2rem;
 }
 
 .social-icon {
-    font-size: 1.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 1rem;
+    font-size: 1.4rem;
+    color: var(--text-secondary);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
 }
 
 .social-icon:hover {
-    background: #fff;
-    color: #1a1a2e;
-    transform: scale(1.1);
+    background: var(--primary-blue);
+    color: #fff;
+    transform: translateY(-3px);
 }
 
 /* Animations */
@@ -194,15 +303,33 @@ a {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-@keyframes pulse {
-    0% { opacity: 0.1; transform: scale(1); }
-    100% { opacity: 0.3; transform: scale(1.2); }
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes flow {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(20px, 20px) scale(1.05);
+    }
 }
 
 /* Responsive */
@@ -210,12 +337,25 @@ a {
     .hero h1 {
         font-size: 3rem;
     }
-    
+
     .hero h2 {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
-    
+
     .container {
-        padding: 1rem;
+        padding: 1.5rem;
+    }
+
+    .email-form {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cta-button {
+        width: 100%;
+    }
+
+    .philosophy-item {
+        text-align: center;
     }
 }
