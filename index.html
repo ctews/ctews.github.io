@@ -5,79 +5,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Christoffer Tews | VP of Product</title>
-    <link rel="stylesheet" href="styles.css?v=6">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <!-- Placeholder for icons, or use local/CDN SVGs -->
-    <!-- Using a CDN for generic icons since fontawesome kit might need setup. Swapping to simple unicode or another library if needed. 
-         Let's stick to simple text or reliable CDNs for now to ensure it works immediately. -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-image-wrapper">
-                <img src="images/profile.jpg" alt="Christoffer Tews" class="hero-image">
-            </div>
-            <h1>Building the Future <br>of Product</h1>
-            <h2>Christoffer Tews | VP of Product <br><span style="font-size: 1rem; opacity: 0.7;">15+ Years Building
-                    World-Class Products</span></h2>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-circle">C</span> Tews
+            </a>
 
-            <form class="email-form" action="mailto:christoffer.tews@gmail.com" method="post" enctype="text/plain">
-                <input type="email" placeholder="Your business email" class="email-input" required>
-                <button type="submit" class="cta-button">Get in touch</button>
-            </form>
+            <nav class="nav-menu">
+                <a href="#" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About Me</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#contact" class="nav-link">Contact Me</a>
+            </nav>
 
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <span class="stat-number">15+</span>
-                    <span class="stat-label">Years Experience</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number">VP</span>
-                    <span class="stat-label">Level Leadership</span>
-                </div>
-            </div>
+            <a href="#" class="btn-primary">
+                <i class="fas fa-download"></i> Download CV
+            </a>
         </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+
+        <!-- Hello Bubble -->
+        <div class="hello-bubble">
+            Hello! <span class="wave">👋</span>
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="main-headline">
+            I'm <span class="accent-text">Christoffer</span>, <br>
+            <span class="serif-text">VP of Product</span>
+        </h1>
+
+        <!-- Central Composition -->
+        <div class="profile-composition">
+
+            <!-- Left Floater: Quote -->
+            <div class="floater float-left quote-card">
+                <span class="quote-mark">“</span>
+                <p>"Outstanding strategic vision! Christoffer transforms complex problems into simple, elegant product
+                    solutions."</p>
+            </div>
+
+            <!-- Elements: Decorative SVG Lines (Left) -->
+            <svg class="deco-lines-left" viewBox="0 0 50 50">
+                <path d="M10,10 Q25,25 10,40" stroke="#ff5e62" stroke-width="3" fill="none" />
+                <path d="M20,10 Q35,25 20,40" stroke="#ff5e62" stroke-width="3" fill="none" opacity="0.5" />
+            </svg>
+
+            <!-- Center Image -->
+            <div class="image-container">
+                <div class="image-backdrop"></div>
+                <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                    <div class="flip-card-inner">
+                        <!-- Front: Profile Photo -->
+                        <div class="flip-card-front">
+                            <img src="images/profile.jpg" alt="Christoffer Tews" class="profile-img">
+                        </div>
+                        <!-- Back: Name -->
+                        <div class="flip-card-back">
+                            <span class="flip-name">Christoffer</span>
+                            <span class="flip-title">Love attention to detail?<br>Me too!</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Pill (Bottom of Image) -->
+                <div class="social-pill">
+                    <span class="pill-text">Follow me</span>
+                    <div class="social-icons">
+                        <a href="#" class="icon-circle"><i class="fab fa-dribbble"></i></a>
+                        <!-- Dribbble/Product placeholder -->
+                        <a href="#" class="icon-circle active"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:christoffer.tews@gmail.com" class="icon-circle"><i
+                                class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Floater: Experience -->
+            <div class="floater float-right exp-blob">
+                <div class="blob-content">
+                    <span class="exp-label">Years Of Experience</span>
+                    <span class="exp-number">15+</span>
+                </div>
+            </div>
+
+            <!-- Elements: Decorative Arrow (Right) -->
+            <svg class="deco-arrow" viewBox="0 0 100 100">
+                <path d="M10,10 Q50,5 50,50" stroke="#ff5e62" stroke-width="2" fill="none" class="arrow-path" />
+                <polygon points="50,50 45,40 55,40" fill="#ff5e62" />
+            </svg>
+
+            <!-- Floating Icons -->
+            <div class="floating-icon icon-figma"><i class="fab fa-figma"></i></div>
+            <div class="floating-icon icon-jira"><i class="fab fa-jira"></i></div>
+
+        </div>
+
+        <!-- Background Elements -->
+        <div class="bg-shape shape-1"></div>
+        <div class="bg-shape shape-2"></div>
+
     </section>
-
-    <div class="container">
-        <section class="philosophy">
-            <h3>Core Philosophy</h3>
-            <div class="philosophy-grid">
-                <div class="philosophy-item">
-                    <i class="fas fa-users" style="font-size: 2rem; color: #00d4ff; margin-bottom: 1rem;"></i>
-                    <h4>User-Centric</h4>
-                    <p>Every decision starts with the user. Deep empathy and rigorous research drive meaningful product
-                        experiences.</p>
-                </div>
-                <div class="philosophy-item">
-                    <i class="fas fa-chart-line" style="font-size: 2rem; color: #ff00cc; margin-bottom: 1rem;"></i>
-                    <h4>Data-Informed</h4>
-                    <p>Gut instinct is good; data-backed strategy is better. I leverage analytics to uncover
-                        opportunities and validate hypotheses.</p>
-                </div>
-                <div class="philosophy-item">
-                    <i class="fas fa-lightbulb" style="font-size: 2rem; color: #333399; margin-bottom: 1rem;"></i>
-                    <h4>Visionary</h4>
-                    <p>It's not just about what we build today, but how it sets us up for tomorrow. Strategic thinking
-                        for long-term success.</p>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <footer class="footer" id="contact">
-        <div class="container">
-            <h3>Ready to Innovate?</h3>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/christoffer-tews-a7b65b86/" target="_blank" class="social-icon"><i
-                        class="fab fa-linkedin-in"></i></a>
-            </div>
-            <p>&copy; 2026 Christoffer Tews. All rights reserved.</p>
-        </div>
-    </footer>
 
 </body>
 
